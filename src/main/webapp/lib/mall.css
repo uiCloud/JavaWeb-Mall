@@ -1,0 +1,375 @@
+.nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background: #34495e;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.nav-bar a {
+    position: absolute;
+    top: 0;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;
+    transition: .5s;
+}
+
+.cart-active {
+    background-color: #1abc9c;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 4px;
+}
+
+.nav-bar .animation {
+    position: absolute;
+    /* height: 100%;
+    top: 0; */
+    height: 5px;
+    bottom: 0;
+    z-index: 0;
+    background: #1abc9c;
+    width: 100px;
+    border-radius: 8px;
+    transition: all .5s ease 0s;
+}
+
+.nav-bar a:nth-child(1) {
+    width: 150px;
+}
+
+.nav-bar .start-home, .nav-bar a:nth-child(1):hover~.animation {
+    position: absolute;
+    left: 0;
+    width: 150px;
+}
+
+.nav-bar a:nth-child(2) {
+    left: 1010px;
+    width: 110px;
+}
+
+.nav-bar a:nth-child(2):hover~.animation {
+    width: 110px;
+    left: 1150px;
+}
+
+.nav-bar a:nth-child(3) {
+    left: 1000px;
+    width: 110px;
+}
+
+.nav-bar a:nth-child(3):hover~.animation {
+    width: 110px;
+    left: 1260px;
+}
+
+.nav-bar a:nth-child(4) {
+    left: 1000px;
+    width: 110px;
+}
+
+.nav-bar a:nth-child(4):hover~.animation {
+    width: 100px;
+    left: 1400px;
+}
+
+.nav-bar a:nth-child(5) {
+    width: 100px;
+}
+
+.nav-bar a:nth-child(5):hover~.animation {
+    width: 110px;
+    left: 480px;
+}
+
+.shopList {
+    /* background-color: #34495e;
+    color: white; */
+    width: 600px;
+    background-color: #fff;
+    position: fixed;
+    top: 50px;
+    z-index: 2;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.list li {
+    font-size: 18px;
+    list-style: none;
+    text-indent: -30px;
+    text-align: center;
+    float: left;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.listStrong span {
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.list span {
+    display: block;
+    float: left;
+    width: 150px;
+}
+.listBtn {
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+    float: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-indent: 0px;
+    line-height: 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 0, 0, 0.15);
+    color: #fff;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 50%;
+}
+
+
+.checkBtn {
+    left: 42%;
+    width: 80px;
+    height: 40px;
+    color: #fff;
+    background-color: #34495e;
+    font-size: 20px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: .5s;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.checkBtn:hover {
+    background-color: #1abc9c;
+}
+
+.card-section {
+    margin: 15px 0 20px 0;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-section>h1 {
+    color: #1d1d1f;
+    font-weight: 600;
+    font-size: 35px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.card-section h1:nth-child(1) {
+    margin-top: 40px;
+}
+
+.card-section>h4 {
+    color: rgb(68, 60, 60);
+    font-weight: 500;
+    font-size: 25px;
+    margin-top: 0px;
+    margin-bottom: 6px;
+}
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 320px;
+    height: 400px;
+    padding-bottom: 50px;
+    border-radius: 30px;
+    /* overflow: hidden; */
+    margin: 50px 50px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 0, 0, 0.15);
+    transition: .25s;
+    filter: grayscale(0.1) saturate(95%) brightness(95%) contrast(90%);
+}
+
+.card:hover {
+    cursor: url("../img/pointer.png") 6 6, auto;
+    transform: translateY(-12px) scale(1.05);
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, .2);
+}
+
+.product-img {
+    display: inline-block;
+    width: 320px;
+}
+
+.card-price, .card-description {
+    color: #333;
+    font-weight: 600;
+    text-align: center;
+    font-size: 35px;
+}
+
+.card-description {
+    position: relative;
+    text-indent: -5px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    top: 10px;
+    font-size: 20px;
+}
+
+.card-option {
+    position: relative;
+    top: 10px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 0, 0, 0.15);
+    color: #fff;
+    overflow: hidden;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: .4s;
+}
+
+.plus {
+    left: 0%;
+    background: #1abc9c;
+}
+
+.minus {
+    left: 165px;
+    background: rgb(243, 105, 105);
+}
+
+.card-option i {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.card:hover .card-option i {
+    visibility: visible;
+    opacity: 1;
+    line-height: 75px;
+    font-size: 25px;
+    transition: .2s linear;
+}
+
+.card:hover .card-option {
+    visibility: visible;
+    opacity: 1;
+    width: 75px;
+    height: 75px;
+}
+
+.toTop {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    right: 10px;
+}
+
+.toTop a {
+    width: 80px;
+    height: 80px;
+    background: #34495e;
+    border-radius: 50%;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 0, 0, 0.15);
+    color: #fff;
+    text-align: center;
+}
+
+.toTop i {
+    visibility: visible;
+    opacity: 1;
+    line-height: 75px;
+    font-size: 35px;
+    transition: .5s;
+}
+
+.toTop a:hover i {
+    line-height: 60px;
+}
+
+.pay-box {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    width: 500px;
+    height: 550px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.pay-box img {
+    width: 300px;
+}
+
+.sumPrice{
+    position: absolute;
+    top: -446px;
+    right: -260px;
+    width: 600px;
+    font-weight: 400;
+    font-size: 35px;
+    color: #1d1d1f;
+}
+
+.undoPay {
+    position: absolute;
+    bottom: 5%;
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
+    text-indent: 0px;
+    line-height: 66px;
+    background-color: #34495e;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 0, 0, 0.15);
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    float: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

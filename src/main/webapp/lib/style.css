@@ -1,0 +1,241 @@
+html {
+    cursor: url("../img/cursor.png") 6 6, auto;
+}
+
+a:hover, img:hover, .btn:hover, .listBtn:hover {
+    cursor: url("../img/pointer.png") 6 6, auto;
+}
+
+input, h1, h2, h3, h4, h5 {
+    cursor: url("../img/input.png") 6 6, auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    color: #111;
+    font-family: 'Roboto', sans-serif;
+    background: #F1F1F4;
+    margin: 0;
+}
+
+.main {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/mountain.jpg") 0 / cover fixed;
+    overflow: hidden;
+}
+
+.login-box {
+    position: absolute;
+    left: 50%;
+    bottom: 19%;
+    width: 0;
+    height: 0;
+    display: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, .1);
+    box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, .2);
+    overflow: hidden;
+    color: #F1F1F4;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 高斯模糊 */
+
+.login-box::before {
+    background: url("../img/mountain.jpg") 0 / cover fixed;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    filter: blur(20px);
+    margin: -30px;
+}
+
+/* 调整毛玻璃效果颜色 */
+
+.login-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background: rgba(194, 194, 194, 0.1);
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, .3);
+    z-index: 3;
+    transition: .4s;
+}
+
+.avatar:hover {
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, .3);
+}
+
+#img1 {
+    position: relative;
+    top: 36%;
+    left: 32%;
+}
+
+#img2 {
+    position: relative;
+    top: 36%;
+    left: 39%;
+}
+
+form {
+    width: 40%;
+    position: relative;
+    left: 20%;
+    top: 0;
+    color: #F1F1F4;
+}
+
+.input-text {
+    position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 15px 0;
+    padding: 10px 0;
+    border-bottom: 3px solid #F1F1F4;
+}
+
+/* 第一个输入框下边界，同时也为了调节下个输入框动画 */
+
+.input-text:nth-child(1) {
+    margin-bottom: 30px;
+}
+
+/* 输入动画 */
+
+.input-text:before, .input-text:after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    width: 0;
+    height: 3px;
+    background-color: #88e2fd;
+    transition: .5s;
+}
+
+.input-text:after {
+    right: 50%;
+}
+
+.input-text:before {
+    left: 50%;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon i {
+    color: #F1F1F4;
+    transition: .5s;
+}
+
+/* 输入框高度 */
+
+.input-text>div {
+    position: relative;
+    height: 45px;
+}
+
+.input-text>div>h5 {
+    position: relative;
+    left: 10%;
+    bottom: 15%;
+    transform: translateY(-50%);
+    color: #F1F1F4;
+    font-size: 18px;
+    transition: .5s;
+}
+
+.input-text.focus .icon i {
+    color: #88e2fd;
+}
+
+.input-text.focus div h5 {
+    left: 15px;
+    top: -25px;
+    font-size: 15px;
+    color: #F1F1F4;
+}
+
+.input-text.focus:after, .input-text.focus:before {
+    width: 50%;
+}
+
+.input {
+    position: absolute;
+    width: 95%;
+    height: 100%;
+    top: -5px;
+    left: 5px;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.5rem 0.7rem;
+    font-size: 1.3rem;
+    /* color: #555; */
+    color: #F1F1F4;
+    font-family: 'Roboto', sans-serif;
+}
+
+.login-box a {
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    color: #999;
+    font-size: 0.9rem;
+    transition: .3s;
+}
+
+.login-box a:hover {
+    color: #38d39f;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+    margin: 10% 0;
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right, #7fd7f1, #b4edff, #7fd7f1);
+    /* box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, .3); */
+    cursor: pointer;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    background-size: 200%;
+    transition: .5s;
+}
+
+.btn:hover {
+    background-position: right;
+}
